@@ -1,0 +1,93 @@
+<!-- Author: Aditya Vaidya | Purpose: Student Survey Form for SWE 645 Assignment 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Survey</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-light-grey">
+
+  <div class="w3-container w3-teal">
+    <h1>Student Survey Form</h1>
+  </div>
+
+  <form class="w3-container w3-card w3-white w3-round w3-margin" method="post">
+
+    <!-- Required fields -->
+    <label>First Name</label>
+    <input class="w3-input w3-border" type="text" name="fname" required>
+
+    <label>Last Name</label>
+    <input class="w3-input w3-border" type="text" name="lname" required>
+
+    <label>Street Address</label>
+    <input class="w3-input w3-border" type="text" name="address" required>
+
+    <label>City</label>
+    <input class="w3-input w3-border" type="text" name="city" required>
+
+    <label>State</label>
+    <input class="w3-input w3-border" type="text" name="state" required>
+
+    <label>Zip</label>
+    <input class="w3-input w3-border" type="text" name="zip" required>
+
+    <label>Telephone</label>
+    <input class="w3-input w3-border" type="tel" name="phone" required>
+
+    <label>Email</label>
+    <input class="w3-input w3-border" type="email" name="email" required>
+
+    <label>Date of Survey</label>
+    <input class="w3-input w3-border" type="date" name="survey_date" required>
+
+    <!-- Checkboxes -->
+    <p>What did you like most about campus?</p>
+    <input type="checkbox" name="likes" value="students"> Students
+    <input type="checkbox" name="likes" value="location"> Location
+    <input type="checkbox" name="likes" value="campus"> Campus
+    <input type="checkbox" name="likes" value="atmosphere"> Atmosphere
+    <input type="checkbox" name="likes" value="dorms"> Dorm Rooms
+    <input type="checkbox" name="likes" value="sports"> Sports
+
+    <!-- Radio buttons -->
+    <p>How did you become interested in the university?</p>
+    <input type="radio" name="interest" value="friends" required> Friends
+    <input type="radio" name="interest" value="tv"> Television
+    <input type="radio" name="interest" value="internet"> Internet
+    <input type="radio" name="interest" value="other"> Other
+
+    <!-- Dropdown -->
+    <p>Likelihood of recommending this school:</p>
+    <select class="w3-select" name="recommend" style="width:200px;">
+      <option value="very">Very Likely</option>
+      <option value="likely">Likely</option>
+      <option value="unlikely">Unlikely</option>
+    </select>
+
+    <!-- Raffle -->
+    <p>    
+      <label>Raffle (10 comma-separated numbers 1–100)</label>
+    </p>
+
+    <input class="w3-input w3-border"
+           type="text"
+           name="raffle"
+           required
+           pattern="^(\s*([1-9][0-9]?|100)\s*,){9}\s*([1-9][0-9]?|100)\s*$"
+           title="Enter exactly 10 numbers from 1 to 100 separated by commas (e.g. 3,12,45,100,...)">
+
+    <!-- Comments -->
+    <label>Additional Comments</label>
+    <textarea class="w3-input w3-border" name="comments"></textarea>
+
+    <!-- Buttons -->
+    <p>
+      <button class="w3-button w3-green" type="submit">Submit</button>
+      <button class="w3-button w3-red" type="reset">Cancel</button>
+    </p>
+  </form>
+
+</body>
+</html>
